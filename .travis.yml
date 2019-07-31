@@ -7,7 +7,7 @@ cache:
 
 services:
   - docker
-  
+
 env:
   global:
   # Do not prompt for user input when using any SDK methods.
@@ -21,7 +21,7 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project "$PROJECT_ID"
   - gcloud config set compute/zone "$ZONE"
-  - gloud container clusters get-credentials "$CLUSTER_NAME"
+  - gcloud container clusters get-credentials "$CLUSTER_NAME"
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t fullammo/react-test -f ./client/Dockerfile.dev ./client
 
