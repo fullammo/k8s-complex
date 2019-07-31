@@ -7,10 +7,11 @@ cache:
 
 services:
   - docker
-    env:
-      global:
-      # Do not prompt for user input when using any SDK methods.
-      - CLOUDSDK_CORE_DISABLE_PROMPTS=1
+  
+env:
+  global:
+  # Do not prompt for user input when using any SDK methods.
+  - CLOUDSDK_CORE_DISABLE_PROMPTS=1
 
 before_install:
   - openssl aes-256-cbc -K $encrypted_9e3bc2abf21f_key -iv $encrypted_9e3bc2abf21f_iv -in service-account.json.enc -out service-account.json -d
