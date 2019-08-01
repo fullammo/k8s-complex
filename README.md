@@ -15,3 +15,5 @@ helm install --name ingress-bende  stable/nginx-ingress --set rbac.create=true -
 kubectl create secret generic pgpassword --from-literal PGPASSWORD=mypgpassword123
 
 
+
+
