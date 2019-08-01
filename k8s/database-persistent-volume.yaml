@@ -5,12 +5,9 @@ metadata:
   labels:
     type: local
 spec:
-  # storageClassName: manual
-  volumeMode: Filesystem
-  capacity:
+  storageClassName: manual
     storage: 2Gi
   accessModes:
     - ReadWriteOnce
-  # hostPath:
-  #   path: "/mnt/data"
-  # TRY FOR GKE.
+  hostPath:
+    path: "/mnt/data"
