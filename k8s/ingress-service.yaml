@@ -15,7 +15,7 @@ spec:
   #     secretName: bootcamp-risingstack-com
   rules:
       - http:
-        host: bootcamp.risingstack.com
+        # host: bootcamp.risingstack.com
           paths:
             - path: /?(.*)
               backend:
