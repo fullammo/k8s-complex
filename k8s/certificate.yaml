@@ -1,0 +1,18 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata: 
+  name: bootcamp-risingstack-com-tls
+spec:
+  secretName: bootcamp-risingstack-com
+  issuerRef:
+    letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: bootcamp.risingstack.com
+  dnsNames:
+    - bootcamp.risingstack.com
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - bootcamp.risingstack.com
