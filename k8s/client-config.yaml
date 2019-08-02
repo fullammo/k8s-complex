@@ -3,12 +3,11 @@ kind: Service
 metadata:
   name: client-cluster-ip-service
 spec:
-  type: NodePort
+  type: ClusterIp
   selector:
     component: web
   ports:
     - port: 3000
-      protocol: TCP
       targetPort: 3000
 ---
 apiVersion: apps/v1
