@@ -5,7 +5,7 @@ metadata:
 spec:
   secretName: bootcamp-risingstack-com
   issuerRef:
-    letsencrypt-prod
+    name: letsencrypt-prod
     kind: ClusterIssuer
   commonName: bootcamp.risingstack.com
   dnsNames:
