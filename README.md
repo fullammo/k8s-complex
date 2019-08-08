@@ -1,3 +1,6 @@
+minikube ssh
+mkdir mnt/data
+
 SECRETET FELRAKNI
 
 FEL KELL RAKNI HELMET
